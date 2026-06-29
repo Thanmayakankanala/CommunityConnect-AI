@@ -1,10 +1,42 @@
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar/Navbar";
+
+import Home from "./pages/Home";
+import ReportIssue from "./pages/ReportIssue";
+import Admin from "./pages/Admin";
+import Login from "./pages/Login";
+
 function App() {
   return (
-    <div className="min-h-screen bg-blue-600 flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-white">
-        CommunityConnect AI 🚀
-      </h1>
-    </div>
+    <>
+      <Navbar />
+
+      <Routes>
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        <Route
+          path="/report"
+          element={<ReportIssue />}
+        />
+
+        <Route
+          path="/admin"
+          element={<Admin />}
+        />
+
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+      </Routes>
+
+    </>
   );
 }
 
